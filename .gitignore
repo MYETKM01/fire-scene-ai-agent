@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+agent.log
+*.log
+.venv/
+venv/
+.vscode/
+*.exe
+*.dll
+*.mp4
+*.jpeg
+*.jpg
+*.png
+*.webp
