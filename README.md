@@ -15,29 +15,11 @@ An experimental AI-agent workflow for fire-scene image analysis. The prototype c
 4. Tool results are returned to the model for the final structured report.
 5. The app displays the original and enhanced image, report, and tool execution details.
 
-## Architecture
+## System Architecture
 
-```text
-User / Streamlit UI
-        |
-        v
-Vision-capable LLM (Groq API, OpenAI-compatible client)
-        |  decides whether to call tools
-        v
-Tool dispatcher (Python)
-  |             |                |
-  v             v                v
-C++ enhancer   Local KB       Image metrics
-(subprocess)   keyword search (OpenCV)
-  |             |                |
-  +-------------+----------------+
-                |
-                v
-        Tool results to LLM
-                |
-                v
-       Structured analysis report
-```
+![Fire Scene AI Agent System Architecture](docs/architecture.png)
+
+The agent analyzes uploaded fire-scene images and uses available tools when needed. These tools include my C++ thesis image enhancement algorithm, a local fire-safety knowledge base, and image metrics calculation.
 
 ## My contribution in this project
 
